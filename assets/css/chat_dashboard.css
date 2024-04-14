@@ -1,0 +1,268 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --darkblue: #0E185F;
+    --green: #00FFDD;
+    --lightblue: #051ed8;
+    --transparentblue: #008afc;
+}
+.main-side-bar {
+    width: 100px;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    background-color: var(--darkblue);
+    border-right: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image img {
+    width: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.main-top-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.main-top-links a, .main-bottom a {
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    padding:10px 0;
+    transition: ease 0.4s;
+}
+
+.main-top-links a:hover, .main-bottom a:hover {
+    color: var(--green);
+}
+.main-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/*----------
+Side
+----------*/
+
+.side {
+    margin-left: 100px;
+    display: flex;
+}
+
+.side-bar {
+    width: 800px;
+    border-right: 1px solid grey;
+}
+
+.side-nav {
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+.side-nav-title {
+    padding: 20px;
+}
+
+.side-nav-menu {
+    display: flex;
+    align-items: center;
+    padding-bottom: 50px;
+    border-bottom: 1px solid grey;
+}
+
+.side-nav-menu button, .ai-edit button {
+    background-color: white;
+    border: none;
+    color: var(--darkblue);
+    font-size: 30px;
+    margin-left: 20px;
+    transition: ease 0.4s;
+}
+
+.side-nav-menu button:hover, .ai-edit button:hover {
+    color: var(--lightblue);
+}
+
+.ai-search {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    padding: 5px 5px;
+    /* border: 1px solid var(--darkblue); */
+    border-radius: 100px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.ai-image img {
+    width: 40px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.ai-info h5{
+    padding-top: 5px;
+    line-height: 1px;
+}
+
+.ai-arrow-down{
+    margin-left: 10px;
+}
+
+.ai-add-modal {
+    display: block;
+    position: fixed;
+    top: 20%;
+    right: 40%;
+    z-index: 5;
+    width: 600px;
+    height: 500px;
+    background-color: white;
+    box-shadow: 0px 20px 15px black;
+}
+
+.ai-conversations {
+    padding: 20px 10px;
+    height: 78vh;
+    overflow-y: scroll;
+}
+
+.ai-conversation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid grey;
+    margin-bottom: 10px;
+    padding: 10px 10px;
+    transition: ease 0.3s;
+}
+
+.ai-conversation:hover {
+    background-color: var(--green);
+    border-radius: 5px;
+}
+
+.ai-conversation small {
+    font-style: italic;
+    color: grey;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+.side ::-webkit-scrollbar-thumb {
+    background-color: var(--transparentblue);
+    border-radius: 10px;
+}
+
+
+/*----------
+Side Content
+----------*/
+
+.side-content {
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    padding: 0px 10px;
+}
+
+.conversation {
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+.conversation-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid grey;
+    padding-top: 20px;
+}
+
+.conversation-heading small {
+    font-style: italic;
+    color: gray;
+}
+
+.messages {
+    margin-bottom: 20px;
+}
+
+.client-message {
+    margin: 0 auto;
+    width: 600px;
+    height: auto;
+    color: white;
+    background-color: var(--transparentblue);
+    padding: 20px 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.ai-message {
+    margin: 0 auto;
+    width: 600px;
+    height: auto;
+    color: white;
+    background-color: var(--lightblue);
+    padding: 20px 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.client-message small, .ai-message small {
+    float: right;
+    font-style: italic;
+    color: grey;
+}
+
+.switch-respondant {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.take-over-button {
+    padding: 10px 20px;
+    background-color: var(--darkblue);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: ease 0.3s;
+}
+
+.take-over-button:hover {
+    background-color: var(--lightblue);
+}
+
+.modal-btn {
+    border: none;
+    background-color: white;
+    color: var(--darkblue);
+}
